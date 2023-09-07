@@ -1,36 +1,24 @@
 #include <stdio.h>
 
-int main()
-{
-    int matrix[2][3][2];
-    int i, j, k;
+int main() {
+    int i, n;
+    float avg = 0, y;
 
-    printf("Enter 12 values \n");
+    printf("Enter the total average number: ");
+    scanf("%d", &n);
 
-    for (i = 0; i < 2; i++)
+    printf("Enter the numbers one by one \n");
+
+    for ( i = 0; i < n; i++)
     {
-        for (j = 0; j < 3; j++)
-        {
-            for (k = 0; k < 2; k++)
-            {
-                scanf("%d", &matrix[i][j][k]);
-            }
-        }
+        printf("Enter number %d = ", i);
+        scanf("%f", &y);
+        avg += y;
     }
 
-    // display the values
-    printf("\n ------------------- \n\n");
+    avg = avg / n;
 
-    for (i = 0; i < 2; i++)
-    {
-        for (j = 0; j < 3; j++)
-        {
-            for (k = 0; k < 2; k++)
-            {
-                printf("Matrix[%d][%d][%d] = %d \n", i, j, k, matrix[i][j][k]);
-            }
-        }
-    }
+    printf("Average = %0.2f", avg);
 
     return 0;
 }

@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+void insertion_sort(int arr[], int size) {
+
+    int i, j, item;
+
+    for(i = 1; i < size; ++i) {
+        item = arr[i];
+
+        j = i - 1;
+        while(j >= 0 && arr[j] > item) {
+            arr[j+1] = arr[j];
+            j = j - 1;
+        }
+
+        arr[j + 1] = item;
+    }
+
+
+    for(i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+
+}
+
+
+int main() {
+    int numbers[] = {2, 4, 5, 7, 10, 3, 2, 2, 8};
+    int size = sizeof(numbers)/sizeof(numbers[0]);
+
+    printf("size: %d \n \n", size);
+
+    insertion_sort(numbers, size);
+
+
+    return 0;
+}
