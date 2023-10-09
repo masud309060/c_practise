@@ -14,6 +14,11 @@ int main() {
         scanf("%d", &arr[i]);
     }
     
+    printf("\n");
+    for ( i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
     
     int isPalindrom = 1;
     for(i = 0, j = size - 1; i < size/2; i++, j--) {
@@ -23,16 +28,11 @@ int main() {
         }
     }
 
-    printf("\n");
-    for ( i = 0; i < size; i++)
-    {
-        printf("%d ", arr[i]);
-    }
         
     if(isPalindrom == 1) {
-        printf(" The array number is Panindrom \n");
+        printf(" The array is Panindrom \n");
     } else {
-         printf(" The array number is not Panindrom \n");
+         printf(" The array is not Panindrom \n");
     }
     
     printf("\n");
